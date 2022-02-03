@@ -1,0 +1,39 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = "native"
+}
+
+model Man {
+  id   String @id @default(cuid())
+  name String
+}
+
+model Woman {
+  id   String @id @default(cuid())
+  name String
+}
+
+model Boy {
+  id   String @id @default(cuid())
+  name String
+}
+
+model Girl {
+  id   String @id @default(cuid())
+  name String
+}
+
+model Dog {
+  id   String @id @default(cuid())
+  name String
+}
+
+model Cat {
+  id   String @id @default(cuid())
+  name String
+}
